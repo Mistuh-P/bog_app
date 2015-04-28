@@ -1,0 +1,7 @@
+<h1>Create a Creature</h1>
+
+  <%= bootstrap_form_for @creature do |c| %>
+  <%= c.text_field :name, :placeholder =>"Enter a Creature" %>
+  <%= c.text_field :desc, :placeholder =>"Describe it!" %>
+  <%= c.primary %>
+  <% end %>

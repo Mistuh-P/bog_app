@@ -1,0 +1,10 @@
+<h1>This is my Creatures index page!</h1>
+
+<% @creatures.each do |c| %>
+
+  <li><%= link_to c.name, c %></li>
+
+<% end %>
+
+<%= link_to "Add a new Creature", new_creature_path %>
+
