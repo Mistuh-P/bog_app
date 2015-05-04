@@ -1,0 +1,22 @@
+<div class="row">
+<div class="container col-md-4 col-md-offset-4">
+<h1>Tags of the Bog</h1>
+
+ <%= render "layouts/flash" %>
+
+
+<% @tags.each do |t| %>
+
+  <li>
+  <%=  link_to t.name, t %>
+  <%= link_to "edit", edit_tag_path(t.id), :class=>"btn btn-success" %>
+  <%= link_to "Delete", t, :method => :delete, :class=>"btn btn-danger" %>
+
+</li>
+
+<% end %>
+
+
+
+</div>
+</div>

@@ -1,7 +1,11 @@
-<h1>Create a Creature</h1>
-
+<div class="row">
+  <div class="container col-md-4 col-md-offset-4">
+<h1 id="headerstyle">Create a Creature</h1>
   <%= bootstrap_form_for @creature do |c| %>
-  <%= c.text_field :name, :placeholder =>"Enter a Creature" %>
-  <%= c.text_field :desc, :placeholder =>"Describe it!" %>
-  <%= c.primary %>
+  <%= c.text_field :name, :placeholder =>"Name it!", :class => 'formstyle' %>
+  <%= c.text_field :desc, :placeholder =>"Describe it!", :class => 'formstyle' %>
+  <%= c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+  <%= c.primary :class => 'btn btn-success' %>
   <% end %>
+  </div>
+</div>

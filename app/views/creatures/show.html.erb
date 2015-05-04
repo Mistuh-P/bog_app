@@ -1,5 +1,15 @@
-<h1>Show Page for a Creature....</h1>
+<div class="row">
+  <div class="container col-md-4 col-md-offset-4">
+
+<h1><%= @creature.name %></h1>
 
 
-<%= @creature.inspect %>
+<p>Description:<br> <%= @creature.desc %> <br> Tags: <br> <%= @creature.tags.map{|t| t.name}.join(',') %></p>
 
+<img src=<%= @photo %>>
+
+
+<%= link_to "Edit this Creature", edit_creature_path, :class=>"btn btn-success" %>
+<%= link_to "Remove this Creature", @creature, :method => :delete, :class=>"btn btn-danger" %>
+</div>
+</div>

@@ -8,6 +8,9 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
   <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -46,10 +49,13 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
+</div>
+</div>
 </head>
 <body>
-
+<div class="container divvy col-md-10 col-md-offset-1">
 <%= yield %>
+</div>
 
 </body>
 </html>
