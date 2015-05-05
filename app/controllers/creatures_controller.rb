@@ -1,8 +1,8 @@
 require 'flickraw'
 
 # flickr = FlickRaw::Flickr.new
-FlickRaw.api_key="process.env.KEY"
-FlickRaw.shared_secret="process.env.SECRET"
+FlickRaw.api_key=ENV["API_KEY"]
+FlickRaw.shared_secret=ENV["API_SECRET"]
 
 class CreaturesController < ApplicationController
 
