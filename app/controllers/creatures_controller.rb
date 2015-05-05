@@ -1,8 +1,8 @@
-require 'flickraw'
 
-# flickr = FlickRaw::Flickr.new
-FlickRaw.api_key="process.env.KEY"
-FlickRaw.shared_secret="process.env.SECRET"
+
+FlickRaw.api_key=ENV["API_KEY"]
+FlickRaw.shared_secret=ENV["API_SECRET"]
+
 
 class CreaturesController < ApplicationController
 
@@ -31,12 +31,15 @@ class CreaturesController < ApplicationController
 
   def show
     @creature = Creature.find(params[:id])
+    @tag = @creature.tags
 
     list = flickr.photos.search :text => @creature.name, :sort => "relevance"
     photos = list.map do |i|
        "https:/farm3.static.flickr.com/#{i["server"]}/" "#{i["id"]}_" "#{i["secret"]}_n.jpg"
     end
     @photo = photos.sample
+
+
 
   end
 
